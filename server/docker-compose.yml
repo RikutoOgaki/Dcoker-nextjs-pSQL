@@ -1,0 +1,29 @@
+# dockerのバージョン
+version: "3.9"
+services:
+  template_node: 
+    build: ./node/
+    image: template-node
+    init: true
+    user: node
+    working_dir: /var/node
+    init: true
+    ports:
+      - '54321:3000'
+    networks:
+      template_net:
+        ipv4_address: 172.18.0.10
+    volumes:
+      - ../src:/var/node
+      - ./nfs:/var/nfs
+    env_file:
+      - ./node/.env/
+    command: "bash -c 'npm install && npm run dev'"
+
+networks:
+  template_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.18.0.0/24"
+          gateway: 172.18.0.1
