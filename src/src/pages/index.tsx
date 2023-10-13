@@ -12,7 +12,7 @@ export default function Home() {
         <title>Create Next App</title>
       </Head>
       <div>
-
+        <p>今ものすごく眠たい</p>
       </div>
     </>
   )
