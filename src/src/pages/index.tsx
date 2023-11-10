@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Layout>
         <div className={style.homeWrap}>
-          <ul>
+          <ul className={style.nav}>
             <li><Link href={'/samples/01'} className={style.link}>AddMinusButton</Link></li>
             <li><Link href={'/samples/02'} className={style.link}>Calc</Link></li>
           </ul>
