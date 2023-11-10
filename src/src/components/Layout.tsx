@@ -29,11 +29,11 @@ export function Layout({ children }: Props) {
                     {children}
                 </motion.main>
 
-                {flg === '/' ?
+                {flg !== '/' ?
                     null
                     :
-                    <footer>
-                        <Link href={flg}>戻る</Link>
+                    <footer className={style.foot}>
+                        <Link href={flg} className={style.back}>戻る</Link>
                     </footer>
                 }
             </div>

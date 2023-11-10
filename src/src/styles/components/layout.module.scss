@@ -1,6 +1,6 @@
 .layoutWrap {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     .head {
         width: 100%;
@@ -26,6 +26,21 @@
         }
 
         .title {
+            color: #ffffff;
+        }
+    }
+
+    .foot {
+        width: 100%;
+        height: 8vh;
+        background-color: #262626;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1rem;
+
+        .back {
+            font-size: 1rem;
             color: #ffffff;
         }
     }

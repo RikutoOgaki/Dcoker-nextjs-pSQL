@@ -2,17 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Layout } from '@/components/Layout'
+import style from '@/styles/home.module.scss'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Web design training</title>
       </Head>
       <Layout>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <Link href={'/samples/01'}>AddMinusButton</Link>
-          <Link href={'/samples/02'}>Calc</Link>
+        <div className={style.homeWrap}>
+          <ul>
+            <li><Link href={'/samples/01'}>AddMinusButton</Link></li>
+            <li><Link href={'/samples/02'}>Calc</Link></li>
+          </ul>
         </div>
       </Layout>
     </>
